@@ -8,4 +8,11 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
+  def after_teardown
+    DatabaseCleaner.clean
+    super
+  end
 end
+
+DatabaseCleaner.strategy = :truncation
+

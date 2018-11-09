@@ -62,3 +62,7 @@ gem "faker"
 gem "pry"
 gem "pry-byebug"
 gem "hirb"
+
+group :test do
+  gem 'database_cleaner'
+end
